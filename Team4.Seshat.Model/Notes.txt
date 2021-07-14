@@ -1,0 +1,5 @@
+﻿The Models folder should contain the Entity classes that relate to the database tables
+The View Models folder should contain any classes that are used to make the data render on the front end better.
+
+Ask if you aren't sure what folder the class should go in! Or check out some useful infor here:
+https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/what-is-model-and-viewmodel-in-mvc-pattern/

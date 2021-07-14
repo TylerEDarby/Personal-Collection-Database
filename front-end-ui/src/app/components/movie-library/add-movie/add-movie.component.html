@@ -1,0 +1,24 @@
+<h1 mat-dialong-title>Add Movie</h1>
+<div class="add-dialog-content" mat-dialog-content>
+    <form>
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput required type= "text" [(ngModel)]="dataInput.movie.title" name="title" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Format</mat-label>
+            <input matInput required type= "text" [(ngModel)]="dataInput.movie.format" name="author" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input matInput required type= "number" min="0" [(ngModel)]="dataInput.movie.quantity" name="quanitity" />
+        </mat-form-field>
+    </form>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+        <button mat-raised-button (click)="cancel()" color="warm">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.registration-card {
+    margin: 2rem 10rem 2rem 10rem;
+    width: 420px;
+}
+
+form {
+    width: 420px;
+    margin: 2rem auto 5rem;
+    display: block;
+    float: none;
+}
+
+.container {
+    align-items: center;
+}

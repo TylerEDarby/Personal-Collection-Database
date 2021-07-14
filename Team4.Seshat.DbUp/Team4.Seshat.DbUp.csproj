@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\1000-TableScripts\001.0_User_Table.sql" />
+    <None Remove="Scripts\1000-TableScripts\001_Book_Tables.sql" />
+    <None Remove="Scripts\1000-TableScripts\002_Card_Tables.sql" />
+	<None Remove="Scripts\1000-TableScripts\003_Movie_Tables.sql" />
+	<None Remove="Scripts\1000-TableScripts\004_Videogame_Tables.sql" />
+	<None Remove="Scripts\1000-TableScripts\005_Categorical_Fields.sql" />
+	<None Remove="Scripts\2000-DataScripts\001.0_User_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\001_Book_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\002_Card_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\003_Movie_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\004_Videogame_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\005_Fix_Movie_Seed.sql" />
+	<None Remove="Scripts\2000-DataScripts\006_Books_With_Genre.sql" />
+	<None Remove="Scripts\2000-DataScripts\007_Cards_With_Type.sql" />
+	<None Remove="Scripts\2000-DataScripts\008_Movies_With_Format.sql" />
+	<None Remove="Scripts\2000-DataScripts\009_Videogames_With_Console.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<EmbeddedResource Include="Scripts\1000-TableScripts\005_Categorical_Fields.sql" />
+	<EmbeddedResource Include="Scripts\1000-TableScripts\004_Videogame_Tables.sql" />
+	<EmbeddedResource Include="Scripts\1000-TableScripts\003_Movie_Tables.sql" />
+    <EmbeddedResource Include="Scripts\1000-TableScripts\001.0_User_Table.sql" />
+    <EmbeddedResource Include="Scripts\1000-TableScripts\002_Card_Tables.sql" />
+    <EmbeddedResource Include="Scripts\1000-TableScripts\001_Book_Tables.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\001_Book_Seed.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\002_Card_Seed.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\003_Movie_Seed.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\009_Videogames_With_Console.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\008_Movies_With_Format.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\007_Cards_With_Type.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\006_Books_With_Genre.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\005_Fix_Movie_Seed.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\004_Videogame_Seed.sql" />
+    <EmbeddedResource Include="Scripts\2000-DataScripts\001.0_User_Seed.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup" Version="4.5.0" />
+  </ItemGroup>
+
+  <Target Name="TestTarget" AfterTargets="Build">
+    <Message Text="@(Content)" Importance="high" Condition="%(Content.Extension) == '.sql'" />
+    <Error Condition="%(Content.Extension) == '.sql'" Text="Script should be marked as Embedded Resource: %(Content.FileName)%(Content.Extension)" />
+  </Target>
+
+  <Target Name="TestTarget" AfterTargets="Build">
+    <Message Text="@(None)" Importance="high" Condition="%(None.Extension) == '.sql'" />
+    <Error Condition="%(None.Extension) == '.sql'" Text="Script should be marked as Embedded Resource: %(None.FileName)%(None.Extension)" />
+  </Target>
+</Project>

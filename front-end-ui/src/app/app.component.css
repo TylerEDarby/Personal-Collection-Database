@@ -1,0 +1,11 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.sidenav-container {
+    flex: 1;
+}
+
+mat-sidenav {
+    width: 200px;
+}

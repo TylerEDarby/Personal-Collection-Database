@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.larger-button {
+    font-size: 1.25rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dialog-container {
+    align-items: center;
+}
+
+form .dialog-form {
+    width: 100%;
+    margin: 2rem auto;
+    display: block;
+    float: none;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-radio-label {
+    margin: 0 15px 0 0;
+}
+
+.mat-card {
+    padding: 2rem !important;
+}
+table {
+    width: 100%;
+}
+
+.search-container {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container .mat-form-field {
+    width: 10rem;
+}
+
+.library-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-column-quantity {
+    width: 25px;
+    min-width: 25px;
+}
+
+.mat-column-delete {
+    width: 5px;
+}
+
+.add-dialog-content {
+    min-height: 240px;
+}
+
+.mat-form-field-underline {
+    max-width: 180px;
+}

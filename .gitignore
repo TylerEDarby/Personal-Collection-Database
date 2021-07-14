@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+/Team4.Seshat/obj/*
+/Team4.Seshat.DbUp/obj/*
+/Team4.Seshat.DbUp/bin/*
+/Team4.Seshat.Model/obj/*
+/Team4.Seshat.Model/bin/*
+/Team4.Seshat/obj/*
+/Team4.Seshat/bin/*
+/Team4.Seshat/Properties/PublishProfiles/Team4-Seshat-API - Web Deploy.pubxml
+/Team4.Seshat/Properties/ServiceDependencies/Team4-Seshat-API - Web Deploy/apis1.arm.json
+/Team4.Seshat/Properties/ServiceDependencies/Team4-Seshat-API - Web Deploy/profile.arm.json
+/Team4.Seshat/Properties/serviceDependencies.json
+/Team4.Seshat/Properties/serviceDependencies.Team4-Seshat-API - Web Deploy.json

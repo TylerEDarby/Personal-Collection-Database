@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Add Videogame</h1>
+<div class="add-dialog-content" mat-dialog-content>
+    <form>
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput required type="text" [(ngModel)]="dataInput.videogame.title" name="title" />
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Console</mat-label>
+            <input matInput required type="text" [(ngModel)]="dataInput.videogame.console" name="console" />
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input matInput required type="number" min="0" [(ngModel)]="dataInput.videogame.quantity" name="quantity" />
+        </mat-form-field>
+    </form>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+    </div>
+</div>

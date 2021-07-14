@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-card class="registration-card">
+        <mat-card-title>Register</mat-card-title>
+        <form [formGroup]="registrationForm" (ngSubmit)="register()">
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" required />
+                <mat-error *ngIf="registrationForm.controls.username.invalid">
+                    <span *ngIf="registrationForm.controls.username.errors?.required">This field is mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" required type="password" />
+                <mat-error *ngIf="registrationForm.controls.password.invalid">
+                    <span *ngIf="registrationForm.controls.password.errors?.required">This field is mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword" required type="password" />
+                <mat-error *ngIf="registrationForm.controls.confirmPassword.invalid">
+                    <span *ngIf="registrationForm.controls.confirmPassword.errors?.required">This field is
+                        mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="accent">Register</button>
+            <mat-error *ngIf="registrationError">
+                <span>{{registrationError}}</span>
+            </mat-error>
+        </form>
+    </mat-card>
+</div>
